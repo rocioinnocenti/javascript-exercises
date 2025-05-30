@@ -1,0 +1,5 @@
+# Ignorar todos los archivos y subcarpetas en la carpeta soluciones-ejercicios
+soluciones-ejercicios/**
+
+# Ignorar todos los archivos y subcarpetas en la carpeta ejemplos
+ejemplos/**

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación en JavaScript: Conceptos Básicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #004d40;
+        }
+
+        h2 {
+            color: #00796b;
+        }
+
+        button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004ba0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .box {
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        pre {
+            background-color: #a4e7df;
+            color: rgb(10, 10, 10);
+        }
+
+        /* Estilos para el menú */
+        nav {
+            background-color: #00796b;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú superior -->
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#operaciones">Operaciones</a></li>
+            <li><a href="#cadenas">Cadenas</a></li>
+            <li><a href="#funciones">Funciones Basicas</a></li>
+            <li><a href="#dom">DOM</a></li>
+            <li><a href="#domformulario">DOM Formulario</a></li>
+            <li><a href="#condicionales">Condicionales</a></li>
+            <li><a href="#funcionesavanzadas">Funciones Avanzadas</a></li>
+            <li><a href="#arrays">Arrays</a></li>
+            <li><a href="#bucles">Bucles</a></li>
+        </ul>
+    </nav>
+    <h1 id="introduccion">Tutorial Básico de JavaScript</h1>
+    <p>JavaScript es un lenguaje de programación orientado a objetos que se ejecuta en el navegador del cliente. Se
+        utiliza principalmente para crear interactividad en sitios web, permitiendo a los desarrolladores implementar
+        funcionalidades dinámicas y responder a eventos del usuario.</p>
+
+    <!-- Sección: Hola Mundo en JavaScript -->
+    <div class="box">
+        <h2>1. INTRODUCCIÓN. Configuración Inicial</h2>
+        <a href="https://www.w3schools.com/js/js_whereto.asp">Incluir Javascript en HTML</a>
+        <p>Para comenzar a utilizar JavaScript, crea un archivo llamado <code>script.js</code> y luego inclúyelo en tu
+            documento HTML utilizando la etiqueta <code>&lt;script&gt;</code>. Es recomendable colocar el enlace al
+            archivo JavaScript justo antes del cierre de la etiqueta <code>&lt;/body&gt;</code> para asegurar que el
+            contenido de la página se haya cargado antes de ejecutar el script.</p>
+
+        <p>Si decides incluir el script en la parte inferior de tu documento HTML, debería verse así:</p>
+        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Titulo&lt;/h1&gt;
+
+&lt;p&gt;Parrafo&lt;/p&gt;
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+        <h3>Ejemplo de Código JavaScript en <code>script.js</code></h3>
+        <pre><code>
+    // Este código imprime "HOLA MUNDO" en la página
+    document.write("HOLA MUNDO");
+    </code></pre>
+
+    </div>
+
+    <!-- Sección: Variables -->
+    <div class="box">
+        <h2 id="variables">2. VARIABLES</h2>
+        <a href="https://www.w3schools.com/js/js_variables.asp">Variables</a>
+        <p>Las variables son contenedores para almacenar datos. Pueden definirse con <code>let</code>, o
+            <code>const</code> si es un valor que no va a cambiar.
+        </p>
+        <pre><code>
+            //Cadenas
+            let nombre = "Juan";
+            //numeros
+            let numero=5;
+            //Booleanos true o false
+            let meGustaJavascript=true;
+            //Constantes
+            const PI=3.14;
+
+            //DOM para mostrar texto
+            document.write(" Nombre " + nombre);
+            document.write(" Numero " + numero);
+            document.write(" Booleano " + meGustaJavascript);
+            document.write(" Constante " + PI);
+        </code></pre>
+        <button onclick="ejemploVariables()">Ver ejemplo</button>
+        <p id="resultadoVariables"></p>
+    </div>
+
+    <script>
+        function ejemploVariables() {
+            //Cadenas
+            let nombre = "Juan";
+            //numeros
+            let numero = 5;
+            //Booleanos true o false
+            let meGustaJavascript = true;
+            //Constantes
+            const PI = 3.14;
+
+            //DOM para mostrar texto
+            let texto = " Nombre " + nombre;
+            texto += " Numero " + numero;
+            texto += " Booleano " + meGustaJavascript;
+            texto += " Constante " + PI;
+            document.getElementById("resultadoVariables").textContent = texto;
+        }
+    </script>
+
+    <!-- Sección: Operaciones básicas -->
+    <div class="box">
+        <h2 id="operaciones">3. OPERACIONES</h2>
+        <a href="https://www.w3schools.com/js/js_operators.asp">Operaciones</a>
+        <p>JavaScript permite realizar operaciones matemáticas como suma, resta, multiplicación y división.</p>
+        <pre><code>let suma = 5 + 3;
+let resta = 5 - 3;
+let multiplicacion = 5 * 3;
+let division = 6 / 3;</code></pre>
+        <button onclick="ejemploOperaciones()">Ver ejemplo</button>
+        <p id="resultadoOperaciones"></p>
+    </div>
+
+    <script>
+        function ejemploOperaciones() {
+            let suma = 5 + 3;
+            let resta = 5 - 3;
+            let multiplicacion = 5 * 3;
+            let division = 6 / 3;
+            document.getElementById("resultadoOperaciones").innerHTML = `
+                Suma: 5 + 3 = ${suma}<br>
+                Resta: 5 - 3 = ${resta}<br>
+                Multiplicación: 5 * 3 = ${multiplicacion}<br>
+                División: 6 / 3 = ${division}
+            `;
+        }
+    </script>
+
+    <!-- Sección: Cadenas Básicas -->
+    <div class="box">
+        <h2 id="cadenas">4. CADENAS</h2>
+        <a href="https://www.w3schools.com/js/js_string_methods.asp">Cadenas</a>
+        <p>Las cadenas (strings) son textos. Puedes concatenarlas con el operador <code>+</code>.</p>
+        <pre><code>let saludo = "Hola " + "mundo";
+// Obtener longitud de la palabra
+let longitud = saludo.length;
+// Reemplazar "mundo" por "world"
+let remplazar = saludo.replace("mundo", "world");
+// True si contiene la palabra "Hola"
+let contienePalabra = saludo.includes("Hola");
+// Pasar a mayúsculas
+let mayusculas = saludo.toUpperCase();
+// Pasar a minúsculas
+let minusculas = saludo.toLowerCase();
+</code></pre>
+        <button onclick="ejemploCadenas()">Ver ejemplo</button>
+        <p id="resultadoCadenas"></p>
+    </div>
+
+    <script>
+        function ejemploCadenas() {
+            let saludo = "Hola " + "mundo";
+            // Obtener longitud de la palabra
+            let longitud = saludo.length; // Corrección: length en vez de lenghth
+            // Reemplazar "mundo" por "world"
+            let remplazar = saludo.replace("mundo", "world");
+            // True si contiene la palabra "Hola"
+            let contienePalabra = saludo.includes("Hola"); // Corrección: includes en vez de contains
+            // Pasar a mayúsculas
+            let mayusculas = saludo.toUpperCase();
+            // Pasar a minúsculas
+            let minusculas = saludo.toLowerCase(); // Corrección: toLowerCase en vez de toLowwerCase
+
+            // Mostrar el resultado
+            document.getElementById("resultadoCadenas").innerHTML = `
+            Saludo original: ${saludo}<br>
+            Longitud: ${longitud}<br>
+            Reemplazo: ${remplazar}<br>
+            Contiene "Hola": ${contienePalabra}<br>
+            Mayúsculas: ${mayusculas}<br>
+            Minúsculas: ${minusculas}
+        `;
+        }
+    </script>
+
+
+    <!-- Sección: Funciones sin parámetros y evento onclick -->
+    <div class="box">
+        <h2 id="funciones">5. FUNCIONES BASICAS. EVENTOS.</h2>
+        <a href="https://www.w3schools.com/js/js_functions.asp">Funciones</a>
+        <a href="https://www.w3schools.com/js/js_events.asp">Eventos</a>
+        <p>Las funciones son bloques de código que se ejecutan cuando se les llama. Puedes usar eventos como
+            <code>onclick</code> para ejecutarlas.
+        </p>
+        <p><strong>HTML</strong></p>
+        <pre><code>
+        &lt;button onclick="saludar()"&gt;Haz clic para saludar&lt;/button&gt;
+            </code></pre>
+        <p><strong>JAVASCRIPT</strong></p>
+        <pre><code>function saludar() {
+    document.write("¡Hola!");
+}</code></pre>
+        <button onclick="saludar()">Haz clic para saludar</button>
+        <p id="resultadoHola"></p>
+    </div>
+
+    <script>
+        function saludar() {
+            document.getElementById("resultadoHola").innerHTML = "¡Hola!";
+        }
+    </script>
+
+    <!-- Sección: DOM Modificar Texto de un Elemento -->
+    <div class="box">
+        <h2 id="dom">5. DOM. MODIFICAR ELEMENTOS</h2>
+        <a href="https://www.w3schools.com/js/js_htmldom_document.asp">javascript Modificar Elementos del DOM</a>
+        <p>El DOM (Document Object Model) permite acceder y modificar el contenido de los elementos HTML. Puedes cambiar
+            el texto de un elemento utilizando la propiedad <code>textContent</code>.</p>
+
+        <p><strong>HTML</strong></p>
+        <pre><code>
+&lt;p id="miTexto"&gt;Este es un texto que se puede cambiar.&lt;/p&gt;
+&lt;button onclick="modificarTexto()"&gt;Cambiar Texto&lt;/button&gt;
+    </code></pre>
+
+        <p><strong>JavaScript</strong></p>
+        <pre><code>
+function modificarTexto() {
+    document.getElementById("miTexto").textContent = "¡Texto cambiado!";
+}
+    </code></pre>
+
+        <p id="miTexto">Este es un texto que se puede cambiar.</p>
+        <button onclick="modificarTexto()">Cambiar Texto</button> <!-- Botón con onclick -->
+    </div>
+
+    <script>
+        function modificarTexto() {
+            document.getElementById("miTexto").textContent = "¡Texto cambiado!";
+        }
+    </script>
+
+
+
+
+    <!-- Sección: DOM modificar estilo de un elemento -->
+    <div class="box">
+        <h2>5. DOM. MODIFICAR ESTILOS</h2>
+        <a href="https://www.w3schools.com/js/js_htmldom_css.asp">javascript Modificar Estilos del DOM</a>
+        <p>Puedes cambiar el estilo de un elemento mediante <code>style</code>. Ejemplo: cambiar color, ocultar o
+            mostrar un elemento.</p>
+        <p><strong>HTML</strong></p>
+        <pre><code>
+                &lt;div id="miCaja"&gt;Este es un cuadro de texto.&lt;/div&gt;
+                </code></pre>
+        <p><strong>JAVASCRIPT</strong></p>
+        <pre><code>
+ //Cambiar Color           
+document.getElementById("miCaja").style.color = "red";
+
+//Ocultar
+document.getElementById("miCaja").style.display = "block";
+
+//Mostrar
+document.getElementById("miCaja").style.display = "none";
+
+</code></pre>
+        <div id="miCaja">Este es un cuadro de texto.</div>
+        <button onclick="cambiarColor()">Cambiar Color</button>
+        <button onclick="mostrarOcultar()">Mostrar/Ocultar</button>
+    </div>
+
+    <script>
+        function cambiarColor() {
+            document.getElementById("miCaja").style.color = "red";
+        }
+
+        function mostrarOcultar() {
+            const caja = document.getElementById("miCaja");
+            if (caja.style.display === "none") {
+                caja.style.display = "block"; // Mostrar elemento
+            } else {
+                caja.style.display = "none"; // Ocultar elemento
+            }
+        }
+    </script>
+
+    <!-- Sección: DOM Obtener Valores de un Formulario -->
+    <div class="box">
+        <h2 id="domformulario">6. DOM Obtener Valores de un Formulario</h2>
+        <a href="https://www.w3schools.com/jsref/dom_obj_text.asp">javascript DOM Input</a>
+        <a href="https://www.w3schools.com/jsref/dom_obj_select.asp">javascript Select Input</a>
+        <p>Para obtener valores de inputs o selects, puedes usar la propiedad <code>value</code> en JavaScript. A
+            continuación se muestra un ejemplo de cómo hacerlo.</p>
+
+        <pre><code>
+        <!-- HTML -->
+        &lt;form&gt;
+            &lt;label for="miInput"&gt;Edad:&lt;/label&gt;
+            &lt;input type="number" id="edad"&gt;&lt;br&gt;&lt;br&gt;
+            &lt;label for="miSelect"&gt;Color favorito:&lt;/label&gt;
+            &lt;select id="miSelect"&gt;
+                &lt;option value="rojo"&gt;Rojo&lt;/option&gt;
+                &lt;option value="verde"&gt;Verde&lt;/option&gt;
+                &lt;option value="azul"&gt;Azul&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+            &lt;button type="button" onclick="obtenerValores()"&gt;Obtener Valores&lt;/button&gt;
+        &lt;/form&gt;
+
+        // JavaScript
+        // Obtener valores de los elementos
+        let edad = document.getElementById("miInput").valueAsNumber;
+        let color = document.getElementById("miSelect").value;
+        document.getElementById("resultadoFormulario").textContent = `Edad: ${edad}, Color favorito: ${color}`;
+    </code></pre>
+
+        <form>
+            <label for="miInput">Edad:</label>
+            <input type="number" id="miInput"><br><br>
+
+            <label for="miSelect">Color favorito:</label>
+            <select id="miSelect">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select><br><br>
+
+            <button type="button" onclick="obtenerValores()">Obtener Valores</button>
+        </form>
+
+        <p id="resultadoFormulario"></p>
+    </div>
+
+    <script>
+        function obtenerValores() {
+            // Obtener valores de los elementos del formulario
+            let edad = document.getElementById("miInput").valueAsNumber; // Obtener valor de texto
+            let color = document.getElementById("miSelect").value; // Obtener valor seleccionado
+
+            // Mostrar los resultados en la página
+            document.getElementById("resultadoFormulario").textContent = `Edad: ${edad}, Color favorito: ${color}`;
+        }
+    </script>
+
+    <!-- Sección: Condicionales -->
+    <div class="box">
+        <h2 id="condicionales">7. CONDICIONALES</h2>
+        <a href="https://www.w3schools.com/js/js_if_else.asp">Condicionales</a>
+        <p>Los condicionales permiten ejecutar código en función de condiciones. Usa <code>if</code>,
+            <code>else if</code>, y <code>else</code>.
+        </p>
+        <pre><code>
+            function ejemploCondicionales() {
+                let edad = 18; // Puedes cambiar este valor para probar diferentes resultados
+                let mensaje = "";
+                
+                if (edad >= 18) {
+                    mensaje = "Eres mayor de edad.";
+                } else {
+                    mensaje = "Eres menor de edad.";
+                }
+                
+                // Mostrar el mensaje en el elemento con id "resultadoCondicionales"
+                document.getElementById("resultadoCondicionales").textContent = mensaje;
+            }
+        </code></pre>
+        <button onclick="ejemploCondicionales()">Ver ejemplo</button>
+        <p id="resultadoCondicionales"></p> <!-- Parrafo para mostrar el resultado -->
+    </div>
+
+    <script>
+        function ejemploCondicionales() {
+            let edad = 18; // Puedes cambiar este valor para probar diferentes resultados
+            let mensaje = "";
+
+            if (edad >= 18) {
+                mensaje = "Eres mayor de edad.";
+            } else {
+                mensaje = "Eres menor de edad.";
+            }
+
+            // Mostrar el mensaje en el elemento con id "resultadoCondicionales"
+            document.getElementById("resultadoCondicionales").textContent = mensaje;
+        }
+    </script>
+
+    <!-- Sección: Funciones con Parámetros y retorno -->
+    <div class="box">
+        <h2 id="funcionesavanzadas">8. FUNCIONES AVANZADAS.</h2>
+        <p>Las funciones pueden aceptar parámetros, es decir, valores que puedes pasarles, y devolver resultados. Es
+            util para separar la logica del DOM</p>
+        <pre><code>function sumar(a, b) {
+                let resultado = a + b;
+                return resultado;
+    }
+
+function mostarResultado() {
+    let num1 = document.getElementById("num1").valueAsNumber;
+    let num2 = document.getElementById("num2").valueAsNumber;
+
+    let resultado = sumar(num1,num2);
+
+    document.getElementById("resultadoSumar").textContent = "El resultado es " + resultado;
+}
+</code></pre>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <button onclick="mostarResultado()">Suma</button>
+    </div>
+    <p id="resultadoSumar"></p>
+    <script>
+        function mostarResultado() {
+            let num1 = document.getElementById("num1").valueAsNumber;
+            let num2 = document.getElementById("num2").valueAsNumber;
+
+            let resultado = sumar(num1, num2);
+
+            document.getElementById("resultadoSumar").textContent = "El resultado es " + resultado;
+        }
+        function sumar(a, b) {
+            return a + b;
+        }
+    </script>
+
+    <!-- Sección: Arrays -->
+    <div class="box">
+        <h2 id="arrays">9. ARRAYS</h2>
+        <p>Los arrays son listas de valores. Puedes agregar, eliminar y ordenar elementos en un array.</p>
+        <a href="https://www.w3schools.com/js/js_array_methods.asp">Arrays</a>
+        <pre><code>
+            function ejemploArrays() {
+                let numeros = [3, 1, 2];
+                // Eliminar el último elemento y mostrar el array
+                numeros.pop();
+                document.getElementById("resultadoArrays").textContent += "Eliminar: " + numeros + " ";
+                // Agregar elemento y mostrar el array
+                numeros.push(4);
+                document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+                //Obtener la longitud del array
+                let longitud = numeros.lenght;
+                document.getElementById("resultadoArrays").textContent += "Longitud: " + longitud;
+                // Ordenar el array y mostrarlo
+                numeros.sort();
+                document.getElementById("resultadoArrays").textContent +="Ordenar: " + numeros + " ";
+                // Obtener el elemento de la posicion que elijas, el primero es el 0
+                let primero = numeros[0];
+                let tercero = numeros[2];
+                document.getElementById("resultadoArrays").textContent += "Primero " + primero + "Tercero " + tercero;
+            
+            }  
+        </code></pre>
+        <button onclick="ejemploArrays()">Ver ejemplo</button>
+        <p id="resultadoArrays"></p>
+    </div>
+
+    <script>
+        function ejemploArrays() {
+            let numeros = [3, 1, 2];
+            // Eliminar el último elemento y mostrar el array
+            numeros.pop();
+            document.getElementById("resultadoArrays").textContent += "Eliminar: " + numeros + " ";
+            // Agregar elemento y mostrar el array
+            numeros.push(4);
+            document.getElementById("resultadoArrays").textContent += "Agregar: " + numeros + " ";
+            let longitud = numeros.lenght;
+            document.getElementById("resultadoArrays").textContent += "Longitud: " + longitud;
+            // Ordenar el array y mostrarlo
+            numeros.sort();
+            document.getElementById("resultadoArrays").textContent += "Ordenar: " + numeros + " ";
+            // Obtener el elemento de la posicion que elijas, el primero es el 0
+            let primero = numeros[0];
+            let tercero = numeros[2];
+            document.getElementById("resultadoArrays").textContent += "Primero " + primero + "Tercero " + tercero;
+        } 
+    </script>
+    <!-- Sección: Bucle For -->
+    <div class="box">
+        <h2 id="bucles">Bucle For</h2>
+        <p>Los bucles <code>for</code> permiten repetir acciones un número específico de veces.</p>
+        <a href="https://www.w3schools.com/js/js_loop_for.asp">Bucle For</a>
+        <pre><code>
+            function ejemploFor() {
+                let resultado = "";
+                for (let i = 0; i < 5; i++) {
+                    resultado += "Número: " + i;
+                }
+                document.getElementById("resultadoFor").textContent += "Numeros " + resultado;
+            }
+
+            function ejemploForArray() {
+                let lista = ["Ana", "Maria", "Juan"];
+                let resultado = "";
+                for (let i = 0; i < lista.lenght; i++) {
+                    resultado += "Nombre: " + lista[i];
+                }
+                document.getElementById("resultadoFor").textContent += " Lista " + resultado;
+            }
+        </code></pre>
+        <button onclick="ejemploFor()">Ver ejemplo</button>
+        <p id="resultadoFor"></p>
+    </div>
+
+    <script>
+        function ejemploFor() {
+            let resultado = "";
+            for (let i = 0; i < 5; i++) {
+                resultado += `Número: ${i}<br>`;
+            }
+            document.getElementById("resultadoFor").innerHTML = "Numeros " + resultado;
+
+            let lista = ["Ana", "Maria", "Juan"];
+               
+                for (let i = 0; i < lista.lenght; i++) {
+                    resultado += "Nombre: " + lista[i];
+                }
+                document.getElementById("resultadoFor").textContent += " Lista " + resultado;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Mascota</title>
+    <style>
+        #formularioMascota {
+            display: block; /* Muestra el formulario inicialmente */
+        }
+        #resultado {
+            display: none; /* Oculta el resultado inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario para Registrar los Datos de tu Mascota</h1>
+    <p>
+        Completa el siguiente formulario con los datos de tu mascota. 
+        Introduce el nombre, la edad en años, y selecciona el tipo de mascota que tienes (gato, perro o pájaro).
+        Al hacer clic en el botón "Enviar", se mostrarán los datos de tu mascota en mayúsculas, así como su edad convertida a meses.
+    </p>
+
+    <form id="formularioMascota">
+        <label for="nombre">Nombre de la mascota:</label>
+        <input type="text" id="nombre" required>
+        <br><br>
+
+        <label for="edad">Edad en años:</label>
+        <input type="number" id="edad" required min="0">
+        <br><br>
+
+        <label for="tipo">Tipo de mascota:</label>
+        <select id="tipo" required>
+            <option value="">Seleccione...</option>
+            <option value="gato">Gato</option>
+            <option value="perro">Perro</option>
+            <option value="pajaro">Pájaro</option>
+        </select>
+        <br><br>
+
+        <button type="button" onclick="mostrarDatosMascota()">Enviar</button>
+    </form>
+
+    <h2 id="resultado"></h2>
+
+    <script src="e4datosmascota.js"></script>
+</body>
+</html>
+

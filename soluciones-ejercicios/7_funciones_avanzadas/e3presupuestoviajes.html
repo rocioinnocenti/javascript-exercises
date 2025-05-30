@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio de Viaje</title>
+</head>
+<body>
+
+    <h1>Calculadora de Precio de Viaje</h1>
+    
+    <form id="formularioViaje">
+        <label for="destino">Elige tu destino:</label><br>
+        <select id="destino" required>
+            <option value="mallorca">Mallorca</option>
+            <option value="nuevaYork">Nueva York</option>
+            <option value="paris">París</option>
+            <option value="londres">Londres</option>
+        </select><br><br>
+
+        <label for="dias">Número de días (1-30):</label><br>
+        <input type="number" id="dias" min="1" max="30" required><br><br>
+
+        <label for="personas">Número de personas (1-8):</label><br>
+        <input type="number" id="personas" min="1" max="8" required><br><br>
+
+        <button type="button" onclick="calcularViajeValidar()">Calcular Precio</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="e3presupuestoviajes.js"></script>
+
+</body>
+</html>

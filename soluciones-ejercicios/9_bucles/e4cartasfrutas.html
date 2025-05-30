@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Frutas</title>
+</head>
+<body>
+    <h1>Juego de Frutas</h1>
+
+    <div>
+        <h2>Selecciona la fruta para cada posición:</h2>
+        <form id="frutaForm">
+            <label for="pos1">Posición 1:</label>
+            <select id="pos1">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+                <option value="pera">Pera</option>
+                <option value="fresa">Fresa</option>
+            </select>
+            <br>
+            <img id="imagen1" src="https://img.icons8.com/color/48/000000/apple.png" alt="Manzana" hidden>
+
+            <label for="pos2">Posición 2:</label>
+            <select id="pos2">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+                <option value="pera">Pera</option>
+                <option value="fresa">Fresa</option>
+            </select>
+            <img id="imagen2" src="https://img.icons8.com/color/48/000000/banana.png" alt="Banana" hidden>
+            <br>
+
+            <label for="pos3">Posición 3:</label>
+            <select id="pos3">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+                <option value="pera">Pera</option>
+                <option value="fresa">Fresa</option>
+            </select>
+            <br>
+            <img id="imagen3" src="https://img.icons8.com/color/48/000000/orange.png" alt="Naranja" hidden>
+
+
+            <label for="pos4">Posición 4:</label>
+            <select id="pos4">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+                <option value="pera">Pera</option>
+                <option value="fresa">Fresa</option>
+            </select>
+            <img id="imagen4" src="https://img.icons8.com/color/48/000000/pear.png" alt="Pera" hidden>
+            <br>
+
+            <label for="pos5">Posición 5:</label>
+            <select id="pos5">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+                <option value="pera">Pera</option>
+                <option value="fresa">Fresa</option>
+            </select>
+            <img id="imagen5" src="https://img.icons8.com/color/48/000000/strawberry.png" alt="Fresa" hidden>
+            <br>
+
+            <button type="button" onclick="jugar()">Jugar</button>
+        </form>
+    </div>
+
+    <div id="resultados"></div>
+
+    <div id="imagenes">
+       
+ 
+    
+
+    
+    </div>
+    
+
+    <script src="e4cartasfrutas.js"></script>
+</body>
+</html>

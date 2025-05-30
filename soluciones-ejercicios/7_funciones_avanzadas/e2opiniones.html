@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Opinión</title>
+</head>
+<body>
+
+    <h1>Encuesta de Opinión sobre el Servicio</h1>
+    
+    <form id="formularioEncuesta">
+        <label for="atencion">¿Cómo calificarías la atención recibida?</label><br>
+        <select id="atencion" required>
+            <option value="1">Malo</option>
+            <option value="2">Regular</option>
+            <option value="3">Bueno</option>
+            <option value="4">Muy bueno</option>
+        </select><br><br>
+
+        <label for="calidad">¿Cómo calificarías la calidad del servicio?</label><br>
+        <select id="calidad" required>
+            <option value="1">Malo</option>
+            <option value="2">Regular</option>
+            <option value="3">Bueno</option>
+            <option value="4">Muy bueno</option>
+        </select><br><br>
+
+        <label for="precio">¿Cómo calificarías la relación calidad-precio?</label><br>
+        <select id="precio" required>
+            <option value="1">Malo</option>
+            <option value="2">Regular</option>
+            <option value="3">Bueno</option>
+            <option value="4">Muy bueno</option>
+        </select><br><br>
+        
+        <button type="button" onclick="calcularOpinionValidar()">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="e2opiniones.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Consumo de Calorías</title>
+</head>
+<body>
+
+    <h1>Registro de Consumo de Calorías</h1>
+    
+    <form id="formularioCalorias">
+        <label for="desayuno">Calorías en el desayuno:</label><br>
+        <input type="number" id="desayuno" min="0" required><br><br>
+
+        <label for="almuerzo">Calorías en el almuerzo:</label><br>
+        <input type="number" id="almuerzo" min="0" required><br><br>
+
+        <label for="cena">Calorías en la cena:</label><br>
+        <input type="number" id="cena" min="0" required><br><br>
+
+        <button type="button" onclick="calcularCaloriasValidar()">Calcular Total de Calorías</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="e4calorias.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorías Semanal</title>
+</head>
+<body>
+    <h1>Calculadora de Calorías Semanal</h1>
+    <form id="formularioCalorias">
+        <div>
+            <label for="dia1">Lunes:</label>
+            <select id="dia1">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo1" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia2">Martes:</label>
+            <select id="dia2">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo2" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia3">Miércoles:</label>
+            <select id="dia3">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo3" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia4">Jueves:</label>
+            <select id="dia4">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo4" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia5">Viernes:</label>
+            <select id="dia5">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo5" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia6">Sábado:</label>
+            <select id="dia6">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo6" placeholder="Minutos" min="0">
+        </div>
+        <div>
+            <label for="dia7">Domingo:</label>
+            <select id="dia7">
+                <option value="0">Descanso</option>
+                <option value="200">Correr</option>
+                <option value="100">Caminar</option>
+                <option value="150">Nadar</option>
+                <option value="120">Abdominales</option>
+            </select>
+            <input type="number" id="tiempo7" placeholder="Minutos" min="0">
+        </div>
+        <button type="button" onclick="calcularCaloriasTotalValidar()">Enviar</button>
+    </form>
+    <h2 id="resultadoCaloriasTotal"></h2>
+    <script src="e3ejercicios.js">
+    </script>
+</body>
+</html>

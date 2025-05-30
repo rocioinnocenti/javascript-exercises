@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Condicionales</h1>
+
+<p>Parrafo</p>
+
+<form id="formularioedad">
+    <label>Edad:</label>
+    <input type="number" id="edad" required max="100">
+    <button type="button" onclick="comprobarEdadValidada()">Enviar</button>
+</form>
+
+<p id="mensajeedad"></p>
+
+<form id="formularioAdivinar">
+    <label>Adivina el color premiado</label>
+    <select id="colorpremio">
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+    </select>
+    <button type="button" onclick="adivinar()">Adivinar</button>
+</form>
+<p id="mensajepremio"></p>
+
+<script src="condicionales.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetas del Sistema Solar</title>
+</head>
+
+<body>
+
+    <h1>Planetas del Sistema Solar</h1>
+    <form id="formularioplanetas">
+        <p>Introduce un número del 1 al 8 para conocer el planeta correspondiente:</p>
+        <input type="number" id="numero" min="1" max="8" required>
+        <button type="button" onclick="verPlanetaValidar()">Enviar</button>
+    </form>
+
+
+    <h2>Resultado:</h2>
+    <p id="resultado"></p>
+
+    <script src="e2planetas.js"></script>
+
+</body>
+
+</html>
