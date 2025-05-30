@@ -1,0 +1,41 @@
+let nombre = "Rocío";
+let apellidos = "Innocenti";
+let edad = 36;
+let altura = 1.74;
+let ciudad = "Buenos Aires";
+let teGustaLaPlaya = true;
+let teGustaLaMontaña = true;
+let teGustaElChocolate = true;
+let tenesMascota = false;
+
+document.write("MIS DATOS PERSONALES<br>");
+document.write("Nombre: " + nombre + "<br>");
+document.write("Apellidos: " + apellidos + "<br>");
+document.write("Edad: " + edad + " años<br>");
+document.write("Altura: " + altura + " metros<br>");
+document.write("Ciudad: " + ciudad + "<br>");
+document.write("¿Te gusta la playa?: " + teGustaLaPlaya + "<br>");
+document.write("¿Te gusta la montaña?: " + teGustaLaMontaña + "<br>");
+document.write("¿Te gusta el chocolate?: " + teGustaElChocolate + "<br>");
+document.write("¿Tenés mascota?: " + tenesMascota + "<br><br>");
+
+nombre = "Carla";
+apellidos = "Cupaiuolo";
+edad = 35;
+altura = 1.77;
+ciudad = "Buenos Aires";
+teGustaLaPlaya = true;
+teGustaLaMontaña = true;
+teGustaElChocolate = true;
+tenesMascota = true;
+
+document.write("DATOS PERSONALES DE MI AMIGA<br>");
+document.write("Nombre: " + nombre + "<br>");
+document.write("Apellidos: " + apellidos + "<br>");
+document.write("Edad: " + edad + " años<br>");
+document.write("Altura: " + altura + " metros<br>");
+document.write("Ciudad: " + ciudad + "<br>");
+document.write("¿Te gusta la playa?: " + teGustaLaPlaya + "<br>");
+document.write("¿Te gusta la montaña?: " + teGustaLaMontaña + "<br>");
+document.write("¿Te gusta el chocolate?: " + teGustaElChocolate + "<br>");
+document.write("¿Tenés mascota?: " + tenesMascota + "<br><br>");
